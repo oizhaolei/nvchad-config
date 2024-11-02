@@ -13,13 +13,62 @@ return {
     end,
   },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "bash",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "rust",
+        "tsx",
+        "typescript",
+        "vim",
+        "yaml",
+      },
+    },
+  },
+
+  {
+    "tpope/vim-surround",
+    lazy = false,
+  },
+
+  {
+    "tommcdo/vim-exchange",
+    lazy = false,
+  },
+
+  { "mg979/vim-visual-multi" },
+
+  { "inkarkat/vim-ReplaceWithRegister" },
+
+  { "mhinz/vim-signify" },
+
+  {
+    "smoka7/hop.nvim",
+    version = "*",
+    lazy = false,
+    opts = {
+      keys = "etovxqpdygfblzhckisuran",
+    },
+    config = function()
+      require("hop").setup {}
+    end,
+  },
+
+  {
+    "nvim-pack/nvim-spectre",
+    event = "BufRead",
+    config = function()
+      require("spectre").setup()
+    end,
+  },
 }
