@@ -11,13 +11,15 @@ map("i", "jk", "<ESC>")
 
 map("n", "<leader>fs", "<cmd>w<CR>", { desc = "general save file" })
 
+map("n", "<leader>fm", function()
+  require("conform").format {async = true, lsp_fallback = true}
+end, { desc = "File Format with conform" })
+
+map("n", "<leader>a", ":RustLsp codeAction <cr>")
 map("n", "<leader>jc", ":HopChar2<cr>", { silent = true })
 map("n", "<leader>jj", ":HopWord<cr>", { silent = true })
 map("n", "<leader>jl", ":HopLine<cr>", { silent = true })
 map("n", "<leader>jw", ":HopWord<cr>", { silent = true })
-
-map("n", "<leader>ws", "<cmd>split<CR>", { desc = "splitting the window horizontally" })
-map("n", "<leader>wv", "<cmd>vsplit<CR>", { desc = "splitting the window vertically" })
 
 map("n", "<leader>q", "<cmd>q<CR>", { desc = "quit nvim" })
 map("n", "<leader>Q", "<cmd>qa<CR>", { desc = "quit nvim" })

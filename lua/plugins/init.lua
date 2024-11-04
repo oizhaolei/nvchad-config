@@ -9,6 +9,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
   },
@@ -34,6 +35,19 @@ return {
         "yaml",
       },
     },
+  },
+
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function()
+      vim.g.rustfmt_autosave = 1
+    end,
+  },
+
+  {
+    "mrcjkb/rustaceanvim",
+    ft = "rust",
   },
 
   {
