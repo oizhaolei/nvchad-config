@@ -15,7 +15,7 @@ map("n", "<leader>fm", function()
   require("conform").format {async = true, lsp_fallback = true}
 end, { desc = "File Format with conform" })
 
-map("n", "<leader>a", ":RustLsp codeAction <cr>")
+map("n", "ga", ":RustLsp codeAction <cr>")
 map("n", "<leader>jc", ":HopChar2<cr>", { silent = true })
 map("n", "<leader>jj", ":HopWord<cr>", { silent = true })
 map("n", "<leader>jl", ":HopLine<cr>", { silent = true })
